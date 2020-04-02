@@ -11,9 +11,9 @@ $(".next").click(
   right
 );
 
-// $(".prev").click(
-//   left
-// );
+$(".prev").click(
+  left
+);
 
 // Funzione per la freccia avanti
 function right() {
@@ -40,5 +40,27 @@ function right() {
 }
 
 // Funzione per la freccia indietro
+function left() {
+
+  // riferimento dell'immagine a schermo
+  var onscreen = $('.images img.active');
+
+  // pallino attivo
+  var diglett = $(".nav i.active");
+
+  // rimuovo la classe active a img e pallino
+  onscreen.removeClass("active");
+  diglett.removeClass("active");
+
+  // verifico se l'immagine onscreen è l'ultima
+  if(onscreen.hasClass("last")){
+    $("images img.first").addClass("active");
+    $('.nav i.first').addClass('active');
+  } else {
+  // applico .active all'immagine seguente
+  onscreen.prev().addClass("active");
+  diglett.prev().addClass("active");
+  }
+}
 
 });
