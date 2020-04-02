@@ -53,14 +53,18 @@ function left() {
   diglett.removeClass("active");
 
   // verifico se l'immagine onscreen è l'ultima
-  if(onscreen.hasClass("last")){
-    $("images img.first").addClass("active");
-    $('.nav i.first').addClass('active');
+  if(onscreen.hasClass("first")){
+    $("images img.last").addClass("active");
+    $('.nav i.last').addClass('active');
   } else {
-  // applico .active all'immagine seguente
+  // applico .active all'immagine precedente
   onscreen.prev().addClass("active");
   diglett.prev().addClass("active");
   }
 }
+
+// fas fa-circle active first last
+// navigazione tramite pallini
+
 
 });
