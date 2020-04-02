@@ -5,41 +5,48 @@
  box-sizing: border-box;
 }
 
+
+
+
 /* regole generali blocco slider */
 .slider-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  overflow: hidden;
-  height: 80vh;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ overflow: hidden;
+ height: 80vh;
 }
 
 /* regole del blocco imgs */
+
+
+
 .images {
-  width: 80%;
+ width: 80%;
 
 }
 
+
 .images img {
-  width: 100%;
-  display: none;
+ width: 100%;
+ display: none;
 }
 
 .images img.active {
-  display: inline-block;
+ display: inline-block;
 }
 
 /* regole navigazione */
 
 .prev i, .next i{
-  font-size: 40px;
+ font-size: 40px;
 }
 
 .nav {
-  bottom: 20px;
-  left: 40%;
+ position: absolute;
+ bottom: 20px;
+ left: 40%;
 }
-
 .nav i.active {
-  color: red;
+ color: red;
 }
